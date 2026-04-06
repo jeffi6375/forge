@@ -20,6 +20,11 @@ jobs:
       DEVKITPRO: /opt/devkitpro
 
     steps:
+      - name: Install git
+        run: |
+          set -euo pipefail
+          pacman -Sy --noconfirm git ca-certificates
+
       - name: Checkout
         uses: actions/checkout@v6
         with:
