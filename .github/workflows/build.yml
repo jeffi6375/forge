@@ -4,7 +4,6 @@ on:
   push:
     branches:
       - main
-      - cicd
   pull_request:
     branches:
       - main
@@ -57,7 +56,6 @@ jobs:
           pacman -Syu --noconfirm
           pacman -S --noconfirm --needed \
             base-devel \
-            git \
             python \
             python-pip \
             devkitARM \
