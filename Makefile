@@ -20,12 +20,12 @@ TARGET		:=	subsdk
 BUILD		:=	build
 SOURCES 	:= 	source source/forge
 DATA		:=	data
-INCLUDES	:=	include
+INCLUDES	:=	include libs/libnx/nx/include libs/nnSdk/include
 
 #---------------------------------------------------------------------------------
 # options for code generation
 #---------------------------------------------------------------------------------
-ARCH	:=	-march=armv8-a+crc+crypto -mtune=cortex-a57 -mtp=soft -fPIC -ftls-model=local-exec
+ARCH	:=	-march=armv8-a+crc+crypto -mtune=cortex-a57 -mtp=soft -fPIC -ftls-model=initial-exec
 
 CFLAGS	:=	-g -Wall -Werror \
 			-ffunction-sections \
