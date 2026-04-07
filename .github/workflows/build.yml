@@ -20,8 +20,8 @@ jobs:
       DEVKITPRO: /opt/devkitpro
 
     steps:
-      - name: Install git
-        run: apt install git python3
+      - name: Install git+python
+        run: apt install git python3 python3-venv -y
 
       - name: Checkout
         uses: actions/checkout@v6
