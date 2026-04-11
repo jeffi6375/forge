@@ -111,15 +111,8 @@ AlignedBuffer<PAGE_SIZE> forge_loadPluginData(const char* path, size_t* out_size
     return data;
 }
 
-#define FUNC_ADDR(FUNC) #FUNC ": %p", (void*)(&(FUNC))
-
 void forge_plugin_loadPlugins(void)
 {
-    forge_log(FUNC_ADDR(nn::ro::Initialize));
-    forge_log(FUNC_ADDR(nn::ro::LookupModuleSymbol));
-    forge_log(FUNC_ADDR(nn::ro::LoadModule));
-    forge_log(FUNC_ADDR(nn::ro::GetBufferSize));
-
     DIR* dir = opendir("app:/nativeNX/plugins");
     if (dir == NULL) {
         forge_log("Failed to open nativeNX/plugins");
